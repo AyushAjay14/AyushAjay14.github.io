@@ -1,20 +1,25 @@
+---
+#layout: compress # enable only if needed
+---
+
 <!DOCTYPE html>
-<html>
-  {% include head.html %}
+<html lang="{{ site.lang | slice: 0,2 | default: "en" }}">
 
-  <body>
+{% include head.html %}
+
+<body>
+  <!-- page container -->
+  <div class="page-container">
+    <!-- page header -->
     {% include header.html %}
+    <!-- page content -->
+    <main class="page-content" role="main">
+      {{ content }}
+    </main>
+    <!-- page footer -->
+    {% include footer.html %}
+  </div>
+  {% include scripts.html %}
+</body>
 
-    <div class="content-wrapper">
-      <div class="content-wrapper__inner">
-        {{ content }}
-
-    
-
-
-      </div>
-
-      {% include footer.html %}
-    </div>
-  </body>
 </html>

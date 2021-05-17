@@ -1,36 +1,65 @@
-# Jekyll-Uno with Projects as Timeline
-A Jekyll Theme, based on the Uno-Theme with a list of projects as Timeline.
+# [Lone Wolf Theme Jekyll][1]
 
-## How does is look
-[Demo](http://thomas.zuehlke.family/)
-![Screenshot](screenshot-overview.png)
-![jekyll-theme-desktop](https://user-images.githubusercontent.com/32843441/72224870-5451ff00-357f-11ea-8fc2-bfbd4499bc63.gif)
-![jekyll-theme-mobil](https://user-images.githubusercontent.com/32843441/72224877-6a5fbf80-357f-11ea-920b-dfae72bf2fbe.gif)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/manid2/lone-wolf-theme/blob/master/LICENSE)
+[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.8-blue.svg)][jekyll]
+[![Ruby gem](https://badge.fury.io/rb/lone-wolf-theme.svg)](https://rubygems.org/gems/lone-wolf-theme/)
+[![Build Status](https://travis-ci.com/manid2/lone-wolf-theme.svg?branch=master)](https://travis-ci.com/manid2/lone-wolf-theme)
 
-## Installation/Setup
-1. Download or clone repo `git clone https://github.com/tzuehlke/jekyll-uno-timeline.git`
-2. Enter the folder: `cd jekyll-uno-timeline/`
-3. Build it: `jekyll build`
-4. Start Jekyll server: `jekyll serve`
-5. Configure: `_config.yml`
-   * at least set `font_awesome` or download and add the font in `head.html`
+A simple [bootstrap][bs4] based jekyll theme.
 
-Access via: [http://localhost:4000/](http://localhost:4000/)
+It uses
 
-## Details/Features/Changes
-* based on the [Uno-Theme](https://github.com/joshgerdes/jekyll-uno), but:
-  * removed everything with posts
-  * `content-wrapper` can be shown or hidden with button
-  * changed all icons to [Font-Awesome](https://fontawesome.com/)
-  * updated google-analytics snipped
-  * added [Meetup-Link](https://www.meetup.com/)
-  * removed RSS
-  * removed Disqus
-  * using a Timeline-Design instead of posts, therefore no pagination anymore
-* using Timeline ([CSS](https://github.com/le4ker/personal-jekyll-theme/blob/master/css/timeline.scss), [HTML](https://github.com/le4ker/personal-jekyll-theme/blob/master/_includes/timeline.html) ) from [{ Personal } Jekyll Theme](https://github.com/le4ker/personal-jekyll-theme) for a list of projects, but:
-  * still with 3 layouts for different screen-width, but without images on small screens
-  * timeline information source is now `_data/projects.yaml`
-  * always using the `timeline-inverted`-class, for text on the right side of the images
-* using [github_api.js](https://github.com/jarrekk/Jalpc/blob/master/static/js/github_api.js) from [Jalpc.](https://github.com/jarrekk/Jalpc), but:
-  * changed the GitHub-URL for using with persons and organisations
-  * added watchers number
+- [github-pages compatible gems][gh-gems]
+- [bootswatch wrappers][bootswatch]
+- [animate.css][ani-css].
+
+## Who uses it
+
+- [Lone wolf theme docs][1]
+- [Me, manid2][2]
+
+## Screenshots
+
+![Lone wolf theme screenshot][lwt_ss_all_img]
+
+<!-- Images -->
+[lwt_ss_all_img]: lwt_screenshots/lwt_ss_all_in_one.png "Lone wolf theme screenshot"
+
+## Installation
+
+### Using remote theme
+
+Easiest way to use the theme if you dont want to make changes to the theme's
+code.
+
+- Add `remote_theme    : "manid2/lone-wolf-theme"` to your `_config.yml` file.
+
+### By forking the theme repository
+
+If you want to make changes to the code and to truly own the site.
+Follow the blog on [smashing magazine][sm-gh-pages] to learn about this method.
+
+### As a ruby gem
+
+When you want to host the site on any server other than the github pages
+and also to make use of plenty of jekyll plugins.
+
+- Add `gem "lone-wolf-theme"` to your `Gemfile`.
+- Update bundled gems by using `bundle` command.
+- Add `theme    : "lone-wolf-theme"` to your `_config.yml`.
+
+## Contribution
+
+Use the link to learn how to [contribute][3] to LWT.
+
+<!-- Links in the post -->
+[jekyll]: https://jekyllrb.com/
+[bs4]: https://getbootstrap.com/
+[bootswatch]: https://bootswatch.com/
+[gh-gems]: https://pages.github.com/versions/
+[ani-css]: https://daneden.github.io/animate.css/
+[sm-gh-pages]: https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
+
+[1]: https://manid2.github.io/lone-wolf-theme/
+[2]: https://manid2.github.io/
+[3]: https://manid2.github.io/lone-wolf-theme/contribute/
